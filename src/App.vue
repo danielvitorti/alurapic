@@ -1,27 +1,44 @@
+<!-- alurapic/src/App.vue -->
+
 <template>
+
   <div>
-    <h1>{{titulo}} </h1>
-    <img v-bind:src="foto.url" v-bind:alt="foto.titulo" />
+    <h1>{{ titulo }}</h1>
+
+    <ul>
+
+      <li v-for="foto of fotos">
+        <img :src="foto.url" :alt="foto.titulo">
+      </li>
+
+    </ul>
+
   </div>
 </template>
 
 <script>
+
+// agora temos apenas a propriedade `fotos` que é um array que possui dois objetos que possuem as propriedades `url` e `titulo`, cada um com seu valor.
 export default {
-  
-  data () {
+
+  data() {
     return {
       titulo: 'Alurapic',
-      foto:
-      {
-        url: 'http://tudosobrecachorros.com.br/wp-content/uploads/cachorro-independente.jpg',
-        titulo: 'cachorro'
-      }
-      
+      fotos: [
+        {
+          url: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTwV4kVzT5McBdGSgqlVeRzubrNH_mOrrkKseDOGFURq20HmsrelEfMU7It',
+          titulo: 'Cachorro'
+        },
+        {
+          url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOhmlmzV4-Sifx5BIc2SXeA-1CtZJf8jb8V_vPZyKbXIQJKU-rkxGO6OM',
+          titulo: 'Gato'
+        }
+      ]
+
     }
   }
 }
 </script>
 
 <style>
-
 </style>
