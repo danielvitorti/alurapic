@@ -1,3 +1,7 @@
+# Instruções para inicial o servidor feito em node.js e a Api também feita em node.js
+
+npm start
+
 # alurapic
 
 > A Vue.js project
